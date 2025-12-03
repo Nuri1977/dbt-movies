@@ -1,0 +1,508 @@
+---
+safeMode: false
+tables:
+- name: "credits"
+  type: "TABLE"
+  schema: "default"
+  columns:
+  - name: "cast"
+    typeName: "STRING"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 255
+    scale: 0
+    precision: 255
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "crew"
+    typeName: "STRING"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 255
+    scale: 0
+    precision: 255
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "id"
+    typeName: "BIGINT"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 19
+    scale: 0
+    precision: 19
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+- name: "keywords"
+  type: "TABLE"
+  schema: "default"
+  columns:
+  - name: "id"
+    typeName: "BIGINT"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 19
+    scale: 0
+    precision: 19
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "keywords"
+    typeName: "STRING"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 255
+    scale: 0
+    precision: 255
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+- name: "links"
+  type: "TABLE"
+  schema: "default"
+  columns:
+  - name: "movieId"
+    typeName: "BIGINT"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 19
+    scale: 0
+    precision: 19
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "imdbId"
+    typeName: "BIGINT"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 19
+    scale: 0
+    precision: 19
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "tmdbId"
+    typeName: "BIGINT"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 19
+    scale: 0
+    precision: 19
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+- name: "links_small"
+  type: "TABLE"
+  schema: "default"
+  columns:
+  - name: "movieId"
+    typeName: "BIGINT"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 19
+    scale: 0
+    precision: 19
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "imdbId"
+    typeName: "BIGINT"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 19
+    scale: 0
+    precision: 19
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "tmdbId"
+    typeName: "BIGINT"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 19
+    scale: 0
+    precision: 19
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+- name: "movies_metadata"
+  type: "TABLE"
+  schema: "default"
+  columns:
+  - name: "adult"
+    typeName: "STRING"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 255
+    scale: 0
+    precision: 255
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "belongs_to_collection"
+    typeName: "STRING"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 255
+    scale: 0
+    precision: 255
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "budget"
+    typeName: "STRING"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 255
+    scale: 0
+    precision: 255
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "genres"
+    typeName: "STRING"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 255
+    scale: 0
+    precision: 255
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "homepage"
+    typeName: "STRING"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 255
+    scale: 0
+    precision: 255
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "id"
+    typeName: "STRING"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 255
+    scale: 0
+    precision: 255
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "imdb_id"
+    typeName: "STRING"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 255
+    scale: 0
+    precision: 255
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "original_language"
+    typeName: "STRING"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 255
+    scale: 0
+    precision: 255
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "original_title"
+    typeName: "STRING"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 255
+    scale: 0
+    precision: 255
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "overview"
+    typeName: "STRING"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 255
+    scale: 0
+    precision: 255
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "popularity"
+    typeName: "STRING"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 255
+    scale: 0
+    precision: 255
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "poster_path"
+    typeName: "STRING"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 255
+    scale: 0
+    precision: 255
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "production_companies"
+    typeName: "STRING"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 255
+    scale: 0
+    precision: 255
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "production_countries"
+    typeName: "STRING"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 255
+    scale: 0
+    precision: 255
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "release_date"
+    typeName: "STRING"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 255
+    scale: 0
+    precision: 255
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "revenue"
+    typeName: "BIGINT"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 19
+    scale: 0
+    precision: 19
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "runtime"
+    typeName: "DOUBLE"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 15
+    scale: 0
+    precision: 15
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "spoken_languages"
+    typeName: "STRING"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 255
+    scale: 0
+    precision: 255
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "status"
+    typeName: "STRING"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 255
+    scale: 0
+    precision: 255
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "tagline"
+    typeName: "STRING"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 255
+    scale: 0
+    precision: 255
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "title"
+    typeName: "STRING"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 255
+    scale: 0
+    precision: 255
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "video"
+    typeName: "BOOLEAN"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 1
+    scale: 0
+    precision: 1
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "vote_average"
+    typeName: "DOUBLE"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 15
+    scale: 0
+    precision: 15
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "vote_count"
+    typeName: "BIGINT"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 19
+    scale: 0
+    precision: 19
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+- name: "ratings"
+  type: "TABLE"
+  schema: "default"
+  columns:
+  - name: "userId"
+    typeName: "BIGINT"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 19
+    scale: 0
+    precision: 19
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "movieId"
+    typeName: "BIGINT"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 19
+    scale: 0
+    precision: 19
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "rating"
+    typeName: "DOUBLE"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 15
+    scale: 0
+    precision: 15
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "timestamp"
+    typeName: "BIGINT"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 19
+    scale: 0
+    precision: 19
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+- name: "ratings_small"
+  type: "TABLE"
+  schema: "default"
+  columns:
+  - name: "userId"
+    typeName: "BIGINT"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 19
+    scale: 0
+    precision: 19
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "movieId"
+    typeName: "BIGINT"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 19
+    scale: 0
+    precision: 19
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "rating"
+    typeName: "DOUBLE"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 15
+    scale: 0
+    precision: 15
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+  - name: "timestamp"
+    typeName: "BIGINT"
+    ordinalPosition: 0
+    primaryKeySequenceId: 0
+    columnDisplaySize: 19
+    scale: 0
+    precision: 19
+    columnProperties: []
+    nullable: true
+    primaryKey: false
+    autoincrement: false
+views: []
+databaseProductName: "SparkSQL"
+databaseType: "databricks"
+operationLevel: "schema"

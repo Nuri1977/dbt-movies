@@ -1,0 +1,56 @@
+---
+version: 2
+sources:
+- name: default
+  description: databricks
+  tables:
+  - name: movies_metadata
+    columns:
+    - name: adult
+      data_tests: []
+    - name: belongs_to_collection
+      data_tests: []
+    - name: budget
+      data_tests: []
+    - name: genres
+      data_tests: []
+    - name: homepage
+      data_tests: []
+    - name: id
+      data_tests: []
+    - name: imdb_id
+      data_tests: []
+    - name: original_language
+      data_tests: []
+    - name: original_title
+      data_tests: []
+    - name: overview
+      data_tests: []
+    - name: popularity
+      data_tests: []
+    - name: poster_path
+      data_tests: []
+    - name: production_companies
+      data_tests: []
+    - name: production_countries
+      data_tests: []
+    - name: release_date
+      data_tests: []
+    - name: revenue
+      data_tests: []
+    - name: runtime
+      data_tests: []
+    - name: spoken_languages
+      data_tests: []
+    - name: status
+      data_tests: []
+    - name: tagline
+      data_tests: []
+    - name: title
+      data_tests: []
+    - name: video
+      data_tests: []
+    - name: vote_average
+      data_tests: []
+    - name: vote_count
+      data_tests: []

@@ -1,0 +1,14 @@
+---
+version: 2
+sources:
+- name: default
+  description: databricks
+  tables:
+  - name: links
+    columns:
+    - name: movieId
+      data_tests: []
+    - name: imdbId
+      data_tests: []
+    - name: tmdbId
+      data_tests: []

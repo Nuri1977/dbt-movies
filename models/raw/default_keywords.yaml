@@ -1,0 +1,12 @@
+---
+version: 2
+sources:
+- name: default
+  description: databricks
+  tables:
+  - name: keywords
+    columns:
+    - name: id
+      data_tests: []
+    - name: keywords
+      data_tests: []

@@ -1,0 +1,14 @@
+config:
+  send_anonymous_usage_stats: false
+  partial_parse: true
+movies:
+  target: dev
+  outputs:
+    dev:
+      type: databricks
+      host: dbc-e45f48e9-8a31.cloud.databricks.com
+      http_path: /sql/1.0/warehouses/8952301d8f5b62be
+      token: '{{ env_var("db-token-movies") }}'
+      catalog: movies
+      schema: default
+      threads: 4

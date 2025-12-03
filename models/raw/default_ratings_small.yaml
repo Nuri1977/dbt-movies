@@ -1,0 +1,16 @@
+---
+version: 2
+sources:
+- name: default
+  description: databricks
+  tables:
+  - name: ratings_small
+    columns:
+    - name: userId
+      data_tests: []
+    - name: movieId
+      data_tests: []
+    - name: rating
+      data_tests: []
+    - name: timestamp
+      data_tests: []

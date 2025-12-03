@@ -1,0 +1,14 @@
+---
+version: 2
+sources:
+- name: default
+  description: databricks
+  tables:
+  - name: credits
+    columns:
+    - name: cast
+      data_tests: []
+    - name: crew
+      data_tests: []
+    - name: id
+      data_tests: []
