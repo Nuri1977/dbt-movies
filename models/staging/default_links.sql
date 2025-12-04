@@ -2,7 +2,7 @@ with links as (
 	select
 		movieId,
 		imdbId,
-		tmdbIdssss
+		tmdbId
 	from {{ source('default', 'links') }}
 )
 

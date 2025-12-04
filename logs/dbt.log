@@ -4213,3 +4213,93 @@ parsing.
 [0m02:08:08.362043 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 16.45969, "process_in_blocks": "0", "process_kernel_time": 0.954694, "process_mem_max_rss": "223457280", "process_out_blocks": "0", "process_user_time": 7.669449}
 [0m02:08:08.362727 [debug] [MainThread]: Command `dbt run` failed at 02:08:08.362589 after 16.46 seconds
 [0m02:08:08.363306 [debug] [MainThread]: Flushing usage events
+
+
+============================== 12:03:09.811486 | a62b51c1-deac-42de-a7e6-7838b222e786 ==============================
+[0m12:03:09.811486 [info ] [MainThread]: Running with dbt=1.10.11
+[0m12:03:09.825410 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'invocation_command': 'dbt compile --select staging.default_keywords', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True', 'printer_width': '80', 'quiet': 'False', 'profiles_dir': '/Users/nuri/rosetta-dbt-studio-projects/movies', 'log_cache_events': 'False', 'use_colors': 'True', 'log_path': '/Users/nuri/rosetta-dbt-studio-projects/movies/logs', 'partial_parse': 'True', 'log_format': 'default', 'target_path': 'None', 'no_print': 'None', 'debug': 'False', 'use_experimental_parser': 'False', 'empty': 'False', 'static_parser': 'True', 'introspect': 'True', 'warn_error': 'None', 'send_anonymous_usage_stats': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False'}
+[0m12:03:09.826094 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+
+User config should be moved from the 'config' key in profiles.yml to the 'flags' key in dbt_project.yml.
+[0m12:03:12.360315 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m12:03:12.360869 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m12:03:12.361245 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m12:03:15.463713 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `target-path` config in `dbt_project.yml` has been deprecated, and will no
+longer be supported in a future version of dbt-core. If you wish to write dbt
+artifacts to a custom directory, please use the --target-path CLI flag or
+DBT_TARGET_PATH env var instead.
+[0m12:03:15.721691 [info ] [MainThread]: Registered adapter: databricks=1.10.12
+[0m12:03:16.020915 [debug] [MainThread]: checksum: 5335e1629744fab92fa7809c625edbb36f0d7063a879d6215c971798f27e66f9, vars: {}, profile: , target: , version: 1.10.11
+[0m12:03:16.024936 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m12:03:18.778685 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/nuri/rosetta-dbt-studio-projects/movies/target12233223/manifest.json
+[0m12:03:18.784945 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/nuri/rosetta-dbt-studio-projects/movies/target12233223/semantic_manifest.json
+[0m12:03:18.825521 [info ] [MainThread]: Found 14 models, 7 sources, 686 macros
+[0m12:03:18.827555 [info ] [MainThread]: 
+[0m12:03:18.828129 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m12:03:18.828644 [info ] [MainThread]: 
+[0m12:03:18.829430 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m12:03:18.829913 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m12:03:18.841931 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_movies_default) - Creating connection
+[0m12:03:18.842613 [debug] [ThreadPool]: Acquiring new databricks connection 'list_movies_default'
+[0m12:03:18.858374 [debug] [ThreadPool]: Using databricks connection "list_movies_default"
+[0m12:03:18.859019 [debug] [ThreadPool]: On list_movies_default: /* {"app": "dbt", "dbt_version": "1.10.11", "dbt_databricks_version": "1.10.12", "databricks_sql_connector_version": "4.0.5", "profile_name": "movies", "target_name": "dev", "connection_name": "list_movies_default"} */
+
+    
+SELECT
+  table_name,
+  if(table_type IN ('EXTERNAL', 'MANAGED', 'MANAGED_SHALLOW_CLONE', 'EXTERNAL_SHALLOW_CLONE'), 'table', lower(table_type)) AS table_type,
+  lower(data_source_format) AS file_format,
+  table_owner,
+  if(
+    table_type IN (
+      'EXTERNAL',
+      'MANAGED',
+      'MANAGED_SHALLOW_CLONE',
+      'EXTERNAL_SHALLOW_CLONE'
+    ),
+    lower(table_type),
+    NULL
+  ) AS databricks_table_type
+FROM `system`.`information_schema`.`tables`
+WHERE table_catalog = 'movies' 
+  AND table_schema = 'default'
+
+  
+[0m12:03:18.859510 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m12:03:20.214893 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f0d100-d7d8-101a-ac9d-923d15e181c9) - Created
+[0m12:03:34.578080 [debug] [ThreadPool]: SQL status: OK in 15.720 seconds
+[0m12:03:34.603313 [debug] [ThreadPool]: Databricks adapter: Cursor(session-id=01f0d100-d7d8-101a-ac9d-923d15e181c9, command-id=01f0d100-d81f-16cf-99df-a11a44122844) - Closing
+[0m12:03:34.885347 [debug] [ThreadPool]: On list_movies_default: Close
+[0m12:03:34.885951 [debug] [ThreadPool]: Databricks adapter: Connection(session-id=01f0d100-d7d8-101a-ac9d-923d15e181c9) - Closing
+[0m12:03:35.120741 [debug] [Thread-1 (]: Began running node model.movies.default_keywords
+[0m12:03:35.121501 [debug] [Thread-1 (]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=model.movies.default_keywords) - Creating connection
+[0m12:03:35.121971 [debug] [Thread-1 (]: Acquiring new databricks connection 'model.movies.default_keywords'
+[0m12:03:35.122427 [debug] [Thread-1 (]: Began compiling node model.movies.default_keywords
+[0m12:03:35.132901 [debug] [Thread-1 (]: Writing injected SQL for node "model.movies.default_keywords"
+[0m12:03:35.137400 [debug] [Thread-1 (]: Began executing node model.movies.default_keywords
+[0m12:03:35.138524 [debug] [Thread-1 (]: Finished running node model.movies.default_keywords
+[0m12:03:35.140588 [debug] [MainThread]: Command end result
+[0m12:03:35.366926 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/nuri/rosetta-dbt-studio-projects/movies/target12233223/manifest.json
+[0m12:03:35.373542 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/nuri/rosetta-dbt-studio-projects/movies/target12233223/semantic_manifest.json
+[0m12:03:35.383822 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/nuri/rosetta-dbt-studio-projects/movies/target12233223/run_results.json
+[0m12:03:35.384397 [info ] [MainThread]: Compiled node 'default_keywords' is:
+with keywords as (
+	select
+		id,
+		keywords
+	from `movies`.`default`.`keywords`
+)
+
+select * from keywords
+[0m12:03:35.385439 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ProjectFlagsMovedDeprecation: 1 occurrence
+- ConfigTargetPathDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m12:03:35.386817 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 25.698053, "process_in_blocks": "0", "process_kernel_time": 0.914859, "process_mem_max_rss": "215670784", "process_out_blocks": "0", "process_user_time": 6.185564}
+[0m12:03:35.387533 [debug] [MainThread]: Command `dbt compile` succeeded at 12:03:35.387390 after 25.70 seconds
+[0m12:03:35.388099 [debug] [MainThread]: Flushing usage events

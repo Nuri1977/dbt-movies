@@ -12,4 +12,3 @@ movies:
       catalog: movies
       schema: default
       threads: 4
-      some: 9
