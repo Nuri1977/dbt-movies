@@ -1,7 +1,7 @@
 with credits as (
 	select
 		cast,
-		crew,
+		crewssss,
 		id
 	from {{ source('default', 'credits') }}
 )
