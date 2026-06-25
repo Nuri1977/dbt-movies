@@ -1,17 +1,20 @@
-name: 'movies'
-version: '1.0.0'
+name: dbt_movies
+version: 1.0.0
 config-version: 2
-
-profile: 'movies'
-
-model-paths: ["models"]
-analysis-paths: ["analyses"]
-test-paths: ["tests"]
-seed-paths: ["seeds"]
-macro-paths: ["macros"]
-snapshot-paths: ["snapshots"]
-
-target-path: "target12233223"
+profile: dbt_movies
+model-paths:
+  - models
+analysis-paths:
+  - analyses
+test-paths:
+  - tests
+seed-paths:
+  - seeds
+macro-paths:
+  - macros
+snapshot-paths:
+  - snapshots
+target-path: target12233223
 clean-targets:
-  - "target"
-  - "dbt_packages"
+  - target
+  - dbt_packages
